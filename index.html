@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Clusters within data about cars reviewed by Motor Trend Magazine in 1974</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Clusters within data about cars reviewed by Motor Trend Magazine in 1974">
+  <meta name="author" content="Ben Boor">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/Foundation.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Clusters within data about cars reviewed by Motor Trend Magazine in 1974</h1>
+    <h2>by</h2>
+    <p>Ben Boor<br/>Regression Models Course</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Cars reviewed by Motor Trend Magazine in 1974</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="http://www.jimsmegamagazines.com/images/Motor%20Trend/Motor_Trend_Magazine-1974-June.jpg" alt="motorTrend">
+</script></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Motor Trend Car Road tests dataset</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>In 1974 motor trend magazine took down data about </p>
+
+<ul>
+<li>mpg   Miles/(US) gallon</li>
+<li>cyl   Number of cylinders</li>
+<li>disp  Displacement (cu.in.)</li>
+<li>hp    Gross horsepower</li>
+<li>drat  Rear axle ratio</li>
+<li>wt    Weight (lb/1000)</li>
+<li>qsec  1/4 mile time</li>
+<li>vs    V/S</li>
+<li>am    Transmission (0 = automatic, 1 = manual)</li>
+<li>gear  Number of forward gears</li>
+<li>carb  Number of carburetors</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <article data-timings="">
+    <p>Each variable can be clustered against another variable by using the pull down menu&#39;s</p>
+
+<p>This allows for clusters created by the  variables to be better observed.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <article data-timings="">
+    <p>##How are the variables selected and clustered?</p>
+
+<p>The following r code </p>
+
+<p>output$plot1 &lt;- renderPlot({ par(mar = c(5.1, 4.1, 0, 1))
+    plot(selectedData(),</p>
+
+<pre><code>     col = clusters()$cluster,
+
+     pch = 20, cex = 3)
+
+points(clusters()$centers, pch = 4, cex = 4, lwd = 4)
+</code></pre>
+
+<p>})</p>
+
+<p>Outputs a plot of the two data types selected and places a user defined number of clusters within the graph.<br>
+This output allows for a visual inspection of the clusters within the data, and in doing so creates a greater understanding of the relationship between the variables in the application user.  </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Cars reviewed by Motor Trend Magazine in 1974'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Motor Trend Car Road tests dataset'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title=''>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title=''>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
